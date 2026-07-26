@@ -2,39 +2,54 @@
    Sticky Header
 ========================== */
 
-#header-primary {
+
+#header-desktop,
+#header-mobile {
+
     width: 100%;
     z-index: 9999;
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow .3s ease;
+
 }
 
-#header-primary.is-sticky {
+#header-desktop.is-sticky,
+#header-mobile.is-sticky {
+
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
 
-    animation: slideDown 0.3s ease forwards;
+    animation: slideDown .3s ease forwards;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 20px rgba(0,0,0,.15);
+
 }
 
-#header-spacer {
-    height: 0;
-    overflow: hidden;
-    transition: height 0.3s ease;
+/* Spacer */
+
+#header-spacer{
+
+    height:0;
+    overflow:hidden;
+    transition:height .3s ease;
+
 }
 
-@keyframes slideDown {
+@keyframes slideDown{
 
-    from {
-        opacity: 0;
-        transform: translateY(-12px);
+    from{
+
+        opacity:0;
+        transform:translateY(-12px);
+
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
     }
 
 }
