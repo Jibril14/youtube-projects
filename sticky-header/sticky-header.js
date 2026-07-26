@@ -1,12 +1,24 @@
-// Change these IDs to match your own header and top bar ID.
-const HEADER_ID = "header-primary";
-const TOPBAR_ID = "topbar-primary";
+// ==========================
+// JS
+// ==========================
 
+// Change these IDs to match your own header IDs
+const DESKTOP_HEADER_ID = "header-desktop";
+const MOBILE_HEADER_ID = "header-mobile";
+
+// Change this ID to match your Top Bar
+const TOPBAR_ID = "topbar-primary";
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const header = document.getElementById(HEADER_ID);
+    const desktopHeader = document.getElementById(DESKTOP_HEADER_ID);
+    const mobileHeader = document.getElementById(MOBILE_HEADER_ID);
+
     const topbar = document.getElementById(TOPBAR_ID);
+
+    const header = window.innerWidth <= 767
+        ? mobileHeader
+        : desktopHeader;
 
     if (!header || !topbar) return;
 
@@ -55,10 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("resize", () => {
 
-        if (header.classList.contains("is-sticky")) {
-            updateSpacerHeight();
-        }
-
+        updateSpacerHeight();
         stickyHeader();
 
     });
