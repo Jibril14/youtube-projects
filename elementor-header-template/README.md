@@ -8,7 +8,7 @@ This repository accompanies my YouTube tutorial:
 
 📺 **Watch the tutorial**
 
-[YouTube Tutorial](https://youtu.be/5N0S01zHcqc?si=YakScHV2OscAj6kV)
+[YouTube Tutorial](https://youtu.be/u_xk3W106Ow)
 
 ---
 
